@@ -1,5 +1,6 @@
 from queue import SimpleQueue
 
+
 class Vertex:
     def __init__(self, name):
         self.name = name
@@ -13,6 +14,7 @@ class Vertex:
         if neighbor not in self.neighbors:
             self.neighbors.append(neighbor)
             self.neighbors.sort()
+
 
 class Graph:
     def __init__(self):
