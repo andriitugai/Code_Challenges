@@ -11,13 +11,13 @@ def verifyOrdering(A, ordering):
     def less_than(s1, s2):
         nonlocal order
 
-        last_eq = False
-        for c1, c2 in zip(s1, s2):
-            if order[c1] > order[c2]:
-                return False
-            last_eq = c1 == c2
+        i = 0
+        while i < len(s1) and i < len(s2) and s1[i] == s2[i]:
+            i += 1
 
-        if (last_eq and len(s1) <= len(s2)) or not last_eq:
+        if i < len(s1) and i < len(s2) and order[s1[i]] < order[s2[i]]:
+            return True
+        if i == len(s1):            # s1 is shorter than s2
             return True
 
         return False
@@ -30,7 +30,7 @@ def verifyOrdering(A, ordering):
 
 
 if __name__ == '__main__':
-    a = ["hello", "hey", "a"]
-    ordering = "hlbcdefgijkmnopqrstuvwxzya"
+    a = ["hello", "leetcode"]
+    ordering = "hlabcdefgijkmnopqrstuvwxyz"
 
     print(verifyOrdering(a, ordering))
