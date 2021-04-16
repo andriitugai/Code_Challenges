@@ -3,7 +3,7 @@ def generatePrintBinary(n):
     from queue import Queue
     q = Queue()
 
-    # Enqueu the first binary number
+    # Enqueue the first binary number
     q.put("1")
 
     # This loop is like BFS of a tree with 1 as root
