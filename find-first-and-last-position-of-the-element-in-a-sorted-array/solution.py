@@ -9,7 +9,7 @@ class Solution:
         lp = 0
         rp = len(nums) - 1
 
-        while (lp <= rp):
+        while lp <= rp:
             middle = (lp + rp) // 2
             if nums[middle] >= target:
                 rp = middle - 1
@@ -26,7 +26,7 @@ class Solution:
         lp = 0
         rp = len(nums) - 1
 
-        while (lp <= rp):
+        while lp <= rp:
             middle = (lp + rp) // 2
             if nums[middle] <= target:
                 lp = middle + 1
